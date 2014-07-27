@@ -59,6 +59,8 @@ final_subset$DataType <- final_full$DataType
 ## with the average of each variable by activity *and* by subject
 final_avg <- aggregate(final_subset, list(final_subset$Activity, final_subset$Subject), mean)
 final_avg <- final_avg[, !colnames(final_avg) %in% c('Activity','Subject','DataType')]
+colnames(final_avg)[1] <- "Activity"
+colnames(final_avg)[2] <- "Subject"
 
 # write tidy data files: average by activity and subject
 write.table(final_avg, "final_avg_by_activity_subject.txt",row.names=FALSE)
