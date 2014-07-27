@@ -14,14 +14,14 @@ The script assumes the data files were already extracted into the same working d
 The first part of the script assembles test and training data into a full dataset.
 
 First, the script reads in the following files:
-test/X_test.txt (all test data)
-test/y_test.txt (test activity)
-test/subject_test.txt (test subject information)
-training/X_training.txt (all training data)
-training/y_training.txt (training activity)
-training/subject_training.txt (training subject information)
-features.txt (column names for test and training data)
-activity_labels.txt (code table for activities)
+- test/X_test.txt (all test data)
+- test/y_test.txt (test activity)
+- test/subject_test.txt (test subject information)
+- training/X_training.txt (all training data)
+- training/y_training.txt (training activity)
+- training/subject_training.txt (training subject information)
+- features.txt (column names for test and training data)
+- activity_labels.txt (code table for activities)
 
 It creates a data frame containing all columns in the X_*** files, as well as activities, and subject information. To distinguish test and training data, an extra column named "DataType" was created.
 
